@@ -26,3 +26,8 @@ Quanto de memória ele utiliza? 2kb.
 
 É muito barato utilizar as threads, e ainda tem mecanismos para evitar race condition.
 
+## sqlc
+
+Usa para criar queries. De acordo com o sqlc.yaml
+
+`sqlc generate`
