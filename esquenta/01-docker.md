@@ -85,3 +85,6 @@ Para executar ele: `docker-compose up -d`
 
 -d é para ele ficar em segundo plano.
 
+Não quero mais?
+
+`docker-compose down`
