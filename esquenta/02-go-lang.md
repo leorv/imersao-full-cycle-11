@@ -4,9 +4,7 @@
 
 É uma linguagem back-end.
 
-Fortemente tipada.
-
-Não é orientada a objetos.
+Fortemente tipada. Não é orientada a objetos.
 
 ## Comandos
 

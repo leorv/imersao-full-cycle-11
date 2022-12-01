@@ -1,22 +1,33 @@
 package main
 
-import (
-	"fmt"
-	"time"
-)
+import "fmt"
 
-func contador() {
-	for i := 0; i < 10; i++ {
-		fmt.Println(i)
-		time.Sleep(time.Second)
-	}
+type Product struct {
+	Name  string
+	Price float64
+}
+
+func (p Product) showNameAndPrice() {
+	fmt.Println("Name:", p.Name, "Price:", p.Price)
 }
 
 func main() {
-	fmt.Println("Hello World!")
-	go contador()
-	go contador()
-	contador()
+	product := Product{
+		Name:  "Chair",
+		Price: 100.0,
+	}
 
-	// http.ListenAndServe(":3000", nil)
+	product2 := Product{
+		Name:  "Table",
+		Price: 250.0,
+	}
+
+	product3 := Product{
+		Name:  "Laptop",
+		Price: 1300.0,
+	}
+
+	fmt.Println(product.Name, product.Price, product2)
+
+	product3.showNameAndPrice()
 }
