@@ -1,6 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"database/sql"
+	"fmt"
+
+	_ "github.com/mattn/go-sqlite3"
+)
 
 type Product struct {
 	Name  string
@@ -16,18 +21,16 @@ func main() {
 		Name:  "Chair",
 		Price: 100.0,
 	}
-
-	product2 := Product{
-		Name:  "Table",
-		Price: 250.0,
+	db, err := sql.Open("sqlite3", "data.db")
+	if err != nil {
+		panic(err)
 	}
+	insertProduct(db, product)
+}
 
-	product3 := Product{
-		Name:  "Laptop",
-		Price: 1300.0,
+func insertProduct(db *sql.DB, product Product) {
+	_, err := db.Exec("INSERT INTO products (name, price) VALUES (?,?)", product.Name, product.Price)
+	if err != nil {
+		panic(err)
 	}
-
-	fmt.Println(product.Name, product.Price, product2)
-
-	product3.showNameAndPrice()
 }
