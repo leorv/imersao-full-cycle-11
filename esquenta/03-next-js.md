@@ -14,3 +14,15 @@ Ele vai montando os elementos, vai fazendo as transformações, gera esse html n
 
 Sem virtual DOM isso não seria possível, o SSR (Server Side Rendering).
 
+### Static Site Generation (SSG)
+
+Eu consigo fazer um estático que ele é gerado com um conteúdo dinâmico? Sim.
+
+Isso ocorre no momento do build.
+
+Quando temos uma página estática mas ele precisa de um conteúdo de algum outro lugar.
+
+### Incremental Static Regeneration (ISR)
+
+Um comportamento híbrido, ele usa o getStaticProps, mas a diferença é que ele tem um comportamento onde pode regerar as páginas em tempo de execução.
+
