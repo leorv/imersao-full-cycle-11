@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Player } from "../utils/models";
 
-const PlayersListPage = () => {
+const PlayersListStaticPage = () => {
     const [players, setPlayers] = useState<Player[]>([]);
 
     useEffect(() => {
@@ -20,4 +20,4 @@ const PlayersListPage = () => {
     </div>
 }
 
-export default PlayersListPage;
+export default PlayersListStaticPage;
