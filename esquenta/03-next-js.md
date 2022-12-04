@@ -26,3 +26,6 @@ Quando temos uma página estática mas ele precisa de um conteúdo de algum outr
 
 Um comportamento híbrido, ele usa o getStaticProps, mas a diferença é que ele tem um comportamento onde pode regerar as páginas em tempo de execução.
 
+### Incremental Static Regeneration On Demand
+
+Revalida, mas de forma manual. Usado quando requer que revalide a cada requisição, por exemplo.
